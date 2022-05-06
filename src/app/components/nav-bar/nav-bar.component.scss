@@ -1,7 +1,37 @@
-.example-spacer {
-    flex: 1 1 auto;
+$dark-blue: #081424;
+$dark-blue-2: #11304e;
+$yellow-duck: #FFA737;
+
+* {
+  color: white;
 }
 
-.high-life-font {
-    font-family: "high-life";
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button mat-icon:hover {
+  color: $yellow-duck;
+}
+
+.dark-primary {
+  background-color: $dark-blue;
+}
+
+.image-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.image-avatar img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }

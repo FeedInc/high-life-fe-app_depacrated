@@ -1,0 +1,40 @@
+
+<mat-card class="card">
+  <mat-card-content>
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title> {{ nameProfile }} </mat-card-title>
+      <mat-card-subtitle> @ {{ nickName }} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <span class="iconify" data-icon="mdi:instagram"></span>
+      <button
+        *ngFor="let socialMediaAccount of socialMediaAccounts"
+        [value]="socialMediaAccount.nameSocialMedia"
+      >
+        <div class="button-content">
+          <mat-icon> {{ socialMediaAccount.icon }} </mat-icon>
+          <span> {{ socialMediaAccount.nameSocialMedia }} </span>
+        </div>
+      </button>
+    </mat-card-actions>
+  </mat-card-content>
+
+  <mat-card-content>
+    <p class="data-user">
+      <span> <strong> Nick: </strong> </span> <span> {{ nickName }} </span>
+    </p>
+    <p class="data-user">
+      <span> <strong> Name: </strong> </span> <span> {{ completeName }} </span>
+    </p>
+    <p class="data-user">
+      <span> <strong> Games: </strong> </span> <span *ngFor="let game of games"> {{ game }} </span>
+    </p>
+    <p class="data-user">
+      <span> <strong> Biography: </strong> </span> <span *ngFor="let hero of heroes"> {{ hero }} </span>
+    </p>
+    <p class="data-user">
+      <span> <strong> Heroes: </strong> </span> <span> {{ completeName }} </span>
+    </p>
+  </mat-card-content>
+</mat-card>

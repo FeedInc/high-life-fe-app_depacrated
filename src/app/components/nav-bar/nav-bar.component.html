@@ -1,13 +1,24 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span class = "high-life-font">HIGH LIFE</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+<div>
+  <mat-toolbar class="dark-primary">
+    <mat-toolbar-row>
+      <app-logo-highlife></app-logo-highlife>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <div class="image-avatar">
+          <img
+            src="https://www.esportmaniacos.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-12-142215-1-780x411.png"
+            alt="">
+        </div>
+      </button>
+      <button [routerLink]="'/'" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button (click)="displaySideBar()" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
   </mat-toolbar>
+</div>
+<app-side-bar></app-side-bar>

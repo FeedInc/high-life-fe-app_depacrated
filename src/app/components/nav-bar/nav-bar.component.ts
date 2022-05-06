@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SideBarComponent } from '../side-bar/side-bar.component';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
-  constructor() { }
-
+  @ViewChild(SideBarComponent) sideBar?: SideBarComponent;
   ngOnInit(): void {
+
   }
 
+  displaySideBar() {
+    this.sideBar?.drawer?.toggle();
+  }
 }
