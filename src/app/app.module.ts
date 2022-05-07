@@ -16,8 +16,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MatCardModule } from "@angular/material/card";
-import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component'
+import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
+import { LoginComponent } from './views/login/login.component'
 
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +33,7 @@ import { ProfileDescriptionComponent } from './components/profile-description/pr
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,10 @@ import { ProfileDescriptionComponent } from './components/profile-description/pr
     MatIconModule,
     MatListModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
