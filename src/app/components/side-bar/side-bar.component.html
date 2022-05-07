@@ -1,6 +1,6 @@
 <mat-drawer #drawer class="sidenav" mode="push">
   <mat-selection-list #shoes [multiple]="false">
-    <mat-list-option style="vertical-align: middle;" [routerLink]="'/profile-student'"
+    <mat-list-option style="vertical-align: middle;" [routerLink]="'/profile-coach'"
       *ngFor="let navOption of navOptions" [value]="navOption.optionName">
       <div class="option">
         <mat-icon> {{ navOption.icon }} </mat-icon>
