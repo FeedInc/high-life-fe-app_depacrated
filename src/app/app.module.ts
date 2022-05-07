@@ -23,6 +23,9 @@ import { LoginComponent } from './views/login/login.component'
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { ViewTournamentComponent } from './views/view-tournament/view-tournament.component';
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,7 @@ import {MatButtonModule} from '@angular/material/button';
     SideBarComponent,
     ProfileDescriptionComponent,
     LoginComponent,
+    ViewTournamentComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
