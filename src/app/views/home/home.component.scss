@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$yellow-duck: #FFA737;
+
+.cover {
+  filter: blur(4px);
+}
+
+.image-2{
+  width: 871px;
+  height: 461px;
+  border-radius: 13px;
+}
+
+.banner-font span:nth-child(2),
+ {
+  color: $yellow-duck;}
+
+.banner-font span:nth-child(1),
+
+.banner-font span:nth-child(3) {
+  color: white;}
+
+.banner-font{position: absolute;
+  width: 715px;
+  height: 241px;
+  left: 923px;
+  top: 423px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: justify;
+
+  color: #FFFFFF;}
