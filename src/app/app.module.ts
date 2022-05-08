@@ -23,6 +23,14 @@ import { LoginComponent } from './views/login/login.component'
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+<<<<<<< Updated upstream
+=======
+
+import {MatTableModule} from "@angular/material/table";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+>>>>>>> Stashed changes
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +54,15 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+<<<<<<< Updated upstream
     MatButtonModule
+=======
+    MatButtonModule,
+    MatTableModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatButtonToggleModule
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]
