@@ -17,11 +17,11 @@
       <mat-grid-list cols="1" rowHeight="100px">
         <mat-grid-tile>
           <mat-form-field style=" width: 100%">
-            <mat-label>Your username</mat-label>
-            <input matInput placeholder="Set a username for your profile" formControlName="username" required/>
-            <div *ngIf="email.invalid && (email.dirty || email.touched)">
-              <mat-error *ngIf="email.errors?.['username']">Your must enter valid username.</mat-error>
-              <mat-error *ngIf="email.errors?.['required']">username is required.</mat-error>
+            <mat-label>Nickname</mat-label>
+            <input matInput placeholder="Set a Nickname for your profile" formControlName="nickname" required/>
+            <div *ngIf="nickname.invalid && (nickname.dirty || nickname.touched)">
+              <mat-error *ngIf="nickname.errors?.['username']">Your must enter valid Nickname.</mat-error>
+              <mat-error *ngIf="nickname.errors?.['required']">Nickname is required.</mat-error>
             </div>
           </mat-form-field>
         </mat-grid-tile>
