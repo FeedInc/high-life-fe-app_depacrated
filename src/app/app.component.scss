@@ -1,4 +1,6 @@
-$dark-blue: #273b55;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$dark-blue: #081424;
+
 @font-face {
     font-family: "high-life";
     src: url("../fonts/HighLife.ttf");
@@ -6,13 +8,15 @@ $dark-blue: #273b55;
 
 #app {
     height: 100%;
-    background-color: $dark-blue;
+    background-color: $dark-blue !important;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-.views-container {
-  width: 100%;
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+//.views-container {
+//  width: 100%;
+//  padding-top: 50px;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}

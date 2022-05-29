@@ -17,7 +17,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MatCardModule } from "@angular/material/card";
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
-import { LoginComponent } from './views/login/login.component'
 
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -28,6 +27,8 @@ import { MatTableModule } from "@angular/material/table";
 import { MatGridListModule } from "@angular/material/grid-list";
 
 import { HttpClientModule } from '@angular/common/http';
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
-    LoginComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatTableModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
