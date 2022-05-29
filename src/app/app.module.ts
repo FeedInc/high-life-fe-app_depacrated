@@ -17,6 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MatCardModule } from "@angular/material/card";
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
+import { ViewTournamentComponent } from './views/view-tournament/view-tournament.component';
 
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -43,6 +44,7 @@ import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
     ProfileDescriptionComponent,
     SignInComponent,
     SignUpComponent,
+    ViewTournamentComponent
   ],
   imports: [
     BrowserModule,
