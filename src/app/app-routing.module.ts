@@ -9,8 +9,8 @@ import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "profile-student", component: ProfileStudentComponent },
-  { path: "profile-coach", component: ProfileCoachComponent },
+  { path: "profile-student/:studentId", component: ProfileStudentComponent },
+  { path: "profile-coach/:coachId", component: ProfileCoachComponent },
   { path: "login", component: LoginComponent }
 ];
 

@@ -1,64 +1,96 @@
 $dark-marine: #0D1B29;
 
 
-* {
-  color: white;
+mat-card {
+  width: 1000px;
+  margin-bottom: 30px;
 }
 
-.card {
-  display: flex;
-  max-width: 900px;
-  background-color: $dark-marine;
+mat-card.biography {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
 }
 
-.header-image {
-  background-image: url('https://britishesports.org/wp-content/uploads/coach-gregan-2020.jpg');
-  background-size: cover;
-  width: 200px;
-  height: 200px;
+mat-card > mat-card-content:nth-child(1) {
+  grid-row: 1 / 4;
+  grid-column: 1 / span(100px);
 }
 
-.mat-card-actions {
-  display: flex;
-  flex-direction: column;
+mat-card > mat-card-content:nth-child(2) {
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
 }
 
-.mat-card {
-  display: flex;
-  gap: 20px;
-}
-
-.mat-card .mat-card-content:nth-child(2){
+mat-card-header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.mat-card .mat-card-content:nth-child(2) > p{
-  padding-left: 25px;
-  padding-right: 50px;
-}
-
-
-.mat-card-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 20px 0;
 }
 
-button {
-  background-color: transparent;
-  border: none;
+mat-card-subtitle p {
+  margin: 0 0 2px;
+}
+
+.mat-card-avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
 }
 
 .button-content {
-  margin: 4px 0px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  gap: 0 8px;
 }
+button.button-content > .mat-icon {
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+mat-card-content.description > mat-card-subtitle {
+  color: #333;
+  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+mat-card.stats {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+canvas#canvas {
+  width: 400px!important;
+  height: 400px!important;
+}
+
+@media (max-width: 800px) {
+  canvas#canvas {
+    width: 400px!important;
+    height: 400px!important;
+  }
+}
+
+@media (max-width: 500px) {
+  canvas#canvas {
+    width: 200px!important;
+    height: 200px!important;
+  }
+}
+
+
+
+

@@ -20,12 +20,14 @@ import { ProfileDescriptionComponent } from './components/profile-description/pr
 import { LoginComponent } from './views/login/login.component'
 
 
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
-import {MatTableModule} from "@angular/material/table";
-import {MatGridListModule} from "@angular/material/grid-list";
+import { MatTableModule } from "@angular/material/table";
+import { MatGridListModule } from "@angular/material/grid-list";
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatInputModule,
     MatButtonModule,
     MatTableModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

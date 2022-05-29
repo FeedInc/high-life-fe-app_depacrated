@@ -1,40 +1,41 @@
-
-<mat-card class="card">
+<mat-card class="biography">
   <mat-card-content>
     <mat-card-header>
-      <div mat-card-avatar class="header-image"></div>
-      <mat-card-title> {{ nameProfile }} </mat-card-title>
-      <mat-card-subtitle> @ {{ nickName }} </mat-card-subtitle>
+      <img mat-card-avatar [src]="user?.picture?.large" class="header-image" />
+      <mat-card-title>
+        <p>{{ completeName }}</p>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p> {{ userType }} </p>
+        <p> Location: {{ location }} </p>
+      </mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions>
-      <span class="iconify" data-icon="mdi:instagram"></span>
-      <button
-        *ngFor="let socialMediaAccount of socialMediaAccounts"
-        [value]="socialMediaAccount.nameSocialMedia"
-      >
-        <div class="button-content">
-          <mat-icon> {{ socialMediaAccount.icon }} </mat-icon>
-          <span> {{ socialMediaAccount.nameSocialMedia }} </span>
-        </div>
-      </button>
+      <div *ngFor="let social of socials">
+        <button mat-icon-button>
+          <mat-icon [class]="social.class" class="icon"></mat-icon>
+        </button>
+        <span> {{ social.name }} </span>
+      </div>
     </mat-card-actions>
   </mat-card-content>
 
-  <mat-card-content>
-    <p class="data-user">
-      <span> <strong> Nick: </strong> </span> <span> {{ nickName }} </span>
-    </p>
-    <p class="data-user">
-      <span> <strong> Name: </strong> </span> <span> {{ completeName }} </span>
-    </p>
-    <p class="data-user">
-      <span> <strong> Games: </strong> </span> <span *ngFor="let game of games"> {{ game }} </span>
-    </p>
-    <p class="data-user">
-      <span> <strong> Biography: </strong> </span> <span *ngFor="let hero of heroes"> {{ hero }} </span>
-    </p>
-    <p class="data-user">
-      <span> <strong> Heroes: </strong> </span> <span> {{ completeName }} </span>
-    </p>
+  <mat-card-content class="description">
+    <mat-card-subtitle> Biography </mat-card-subtitle>
+    <p> {{ user?.biography }} </p>
+    <mat-card-subtitle> Games </mat-card-subtitle>
+    <ul *ngFor="let game of games">
+      <li> {{ game?.name }} </li>
+    </ul>
+    <mat-card-subtitle> Medals </mat-card-subtitle>
   </mat-card-content>
 </mat-card>
+
+
+<mat-card class="stats">
+  <div>
+    <canvas id="canvas" class="r"> {{ chart }} </canvas>
+  </div>
+</mat-card>
+
+<img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/6/6d/SeasonalRank1-4.png" alt="">
