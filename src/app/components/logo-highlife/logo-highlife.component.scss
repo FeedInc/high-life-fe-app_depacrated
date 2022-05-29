@@ -1,8 +1,12 @@
 $yellow-duck: #FFA737;
 
+.logo{
+  display: flex;
+  justify-content: center;
+}
 .logo span {
   font-family: "high-life", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .logo span:nth-child(2),
@@ -16,5 +20,5 @@ $yellow-duck: #FFA737;
 }
 
 .logo img {
-    width: 10px;
+    width: 8px;
 }

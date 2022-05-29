@@ -1,8 +1,10 @@
 <mat-toolbar style="background: #e5e3e3">
   <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-  <span><app-logo-highlife></app-logo-highlife></span>
+  <button  mat-button [routerLink]="'/'"><app-logo-highlife></app-logo-highlife></button>
   <span class="default-spacer"></span>
-  <button mat-button [routerLink]="'/profile'">Profile <mat-icon >account_circle</mat-icon></button>
+  <button mat-button [routerLink]="'/sign-in'">SIGN IN <mat-icon><img src="https://cdn-icons-png.flaticon.com/512/1828/1828391.png" alt="login" width="25" height="25"></mat-icon></button>
+  <button mat-button [routerLink]="'/'">SIGN UP</button>
+  <button mat-button [routerLink]="'/'">Profile <mat-icon >account_circle</mat-icon></button>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav class="sidenav-content" opened="false" mode="push">
