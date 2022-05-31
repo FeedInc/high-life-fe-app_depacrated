@@ -66,30 +66,31 @@ mat-card-content.description > mat-card-subtitle {
   font-weight: 500;
 }
 
-mat-card.stats {
-  height: 800px;
+.ranks-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ranks-container > img {
+  width: 150px;
+}
+
+.stats {
   display: flex;
   justify-content: center;
+  gap: 50px;
 }
 
-canvas#canvas {
-  width: 400px!important;
-  height: 400px!important;
+.chart-card {
+  height: 500px;
 }
 
-@media (max-width: 800px) {
-  canvas#canvas {
-    width: 400px!important;
-    height: 400px!important;
-  }
+#stats-section h1 {
+  text-align: center;
 }
 
-@media (max-width: 500px) {
-  canvas#canvas {
-    width: 200px!important;
-    height: 200px!important;
-  }
-}
+
 
 
 

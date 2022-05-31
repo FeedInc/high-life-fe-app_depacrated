@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
+import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-chart-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
+    AppChartDynamicComponent,
     SignInComponent,
     SignUpComponent,
     ViewTournamentComponent

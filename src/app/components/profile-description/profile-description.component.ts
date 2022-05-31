@@ -14,55 +14,39 @@ import { NotFoundError, switchMap, zip, of, forkJoin } from 'rxjs';
 export class ProfileDescriptionComponent implements OnInit {
   @Input() id: string | null = null;
   user: any | null = null;
-  chart: Chart | null = null;
+  datasChart: Array<any> = [];
   games: Array<any> = [];
+  medals: Array<any> = [];
+  colors: Array<any> = [
+    'rgba(255, 99, 132,',
+    'rgba(54, 162, 235,',
+    'rgba(255, 206, 86,',
+    'rgba(75, 192, 192,',
+    'rgba(153, 102, 255,',
+    'rgba(255, 159, 64,'
+  ];
+
 
   constructor(
     private apiUsers: UsersApiService,
     private tools: ToolsService,
     private apiGames: GamesApiService
-  ) {
-    Chart.register(...registerables); //To get type charts working fine!
-  }
+  ) {}
 
   ngOnInit(): void {
     this.getUserInfo();
-    this.initializeChart();
   }
 
-  initializeChart() {
-    this.chart = new Chart('canvas', {
-      type: 'radar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
-        datasets: [
-          {
-            label: '# of Votes',
-            data: [39, 70, 50, 65, 23],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        scales: {
+  initializeCharts() {
+    console.log(this.user?.stats);
+    let index = 0;
+    for (let stats of this.user?.stats) {
+      var temp = this.games?.find((res: any) => res.id == stats.gameId);
+      var chartType = undefined;
+      var chartScales = undefined;
+      if(temp.type == "moba") {
+        chartType = "radar";
+        chartScales = {
           r: {
             min: 0,
             max: 100,
@@ -70,9 +54,38 @@ export class ProfileDescriptionComponent implements OnInit {
               stepSize: 20,
             },
           },
-        },
-      },
-    });
+        };
+      }
+      else if(temp.type == "shooter")
+      chartType = "bar";
+
+      var tempDataChart = {
+        title: temp.name,
+        dataChart: {
+          type: chartType,
+          data: {
+            labels: temp.statsLabels,
+            datasets: [
+              {
+                label: "Stats",
+                data: this.user?.stats.find((stat: any) => stat.gameId == temp.id).data,
+                backgroundColor: `${this.colors[index]} 0.2)`,
+                borderColor: `${this.colors[index]} 1)`,
+                borderWidth: 1,
+              }
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: chartScales
+          },
+        }
+      };
+      console.log(tempDataChart);
+      this.datasChart.push(tempDataChart);
+      index = index + 1;
+    }
   }
 
   socials = [
@@ -89,15 +102,26 @@ export class ProfileDescriptionComponent implements OnInit {
           console.log(res);
           this.user = res;
           const ids = this.user?.games;
-          const observables = forkJoin([
-            this.apiGames.getGame(ids[0]),
-            this.apiGames.getGame(ids[1]),
-          ]);
+          const promises = [];
+          for (let id of ids) {
+            promises.push(this.apiGames.getGame(id));
+          }
+          const observables = forkJoin(promises);
           return observables;
         })
       )
       .subscribe({
-        next: value => console.log(value),
+        next: value => {
+          this.games = value;
+          const findedMedals = [];
+          for (let medalUser of this.user?.medals) {
+            const medal = this.games?.find((game: any) => game.id == medalUser.game).medals?.find((medal: any) => medal.name == medalUser.medal);
+            findedMedals.push(medal);
+          }
+          this.medals = findedMedals;
+          this.initializeCharts();
+          // console.log(findedMedals);
+        },
         complete: () => console.log("Finished")
       });
   }
