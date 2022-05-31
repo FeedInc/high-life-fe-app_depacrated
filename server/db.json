@@ -94,11 +94,11 @@
       "medals":[
         {
           "game": "csgo",
-          "medal": "guardian-4"
+          "medal": "global-elite"
         },
         {
           "game": "valorant",
-          "medal": "bronce-3"
+          "medal": "radiant"
         }
       ],
       "games": ["valorant", "csgo"],
@@ -163,6 +163,7 @@
       "id": "dota2",
       "name": "Dota 2",
       "type": "moba",
+      "logo": "https://1000marcas.net/wp-content/uploads/2020/02/Dota-2-Logo.png",
       "statsLabels":["Fighting", "Farming", "Suporting", "Pushing", "Versatility"],
       "medals": [
         {
@@ -311,6 +312,7 @@
       "id": "lol",
       "name": "League Of Legends",
       "type": "moba",
+      "logo": "https://logodownload.org/wp-content/uploads/2014/09/lol-league-of-Legends-logo-1.png",
       "statsLabels": ["Fighting", "Farming", "Vision", "Agression", "Survivability", "Objectives", "Consistency", "Versatility"],
       "medals": [
         {
@@ -323,13 +325,27 @@
       "id": "valorant",
       "name": "Valorant",
       "type": "shooter",
-      "statsLabels": ["Kills", "Death", "Assistance"]
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/2560px-Valorant_logo_-_pink_color_version.svg.png",
+      "statsLabels": ["Kills", "Death", "Assistance"],
+      "medals": [
+        {
+          "name": "radiant",
+          "imageRank": "https://static.wikia.nocookie.net/valorant/images/2/24/TX_CompetitiveTier_Large_24.png"
+        }
+      ]
     },
     {
       "id": "csgo",
-      "name": "CS-GO Counter-Strike Global Offensive",
+      "name": "CS-GO",
       "type": "shooter",
-      "statsLabels": ["Kills", "Death", "Assistance"]
+      "logo": "https://1000marcas.net/wp-content/uploads/2020/03/Logo-CSGO.png",
+      "statsLabels": ["Kills", "Death", "Assistance"],
+      "medals": [
+        {
+          "name": "global-elite",
+          "imageRank": "https://static.wikia.nocookie.net/cswikia/images/2/2f/Skillgroup18_new.png"
+        }
+      ]
     }
   ]
 }
