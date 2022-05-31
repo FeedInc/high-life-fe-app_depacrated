@@ -41,10 +41,10 @@ export class ProfileDescriptionComponent implements OnInit {
     console.log(this.user?.stats);
     let index = 0;
     for (let stats of this.user?.stats) {
-      var temp = this.games?.find((res: any) => res.id == stats.gameId);
+      var selectedGame = this.games?.find((res: any) => res.id == stats.gameId);
       var chartType = undefined;
       var chartScales = undefined;
-      if(temp.type == "moba") {
+      if(selectedGame.type == "moba") {
         chartType = "radar";
         chartScales = {
           r: {
@@ -56,19 +56,20 @@ export class ProfileDescriptionComponent implements OnInit {
           },
         };
       }
-      else if(temp.type == "shooter")
+      else if(selectedGame.type == "shooter")
       chartType = "bar";
 
       var tempDataChart = {
-        title: temp.name,
-        dataChart: {
+        logo: selectedGame.logo,
+        title: selectedGame.name,
+        dataConfig: {
           type: chartType,
           data: {
-            labels: temp.statsLabels,
+            labels: selectedGame.statsLabels,
             datasets: [
               {
                 label: "Stats",
-                data: this.user?.stats.find((stat: any) => stat.gameId == temp.id).data,
+                data: this.user?.stats.find((stat: any) => stat.gameId == selectedGame.id).data,
                 backgroundColor: `${this.colors[index]} 0.2)`,
                 borderColor: `${this.colors[index]} 1)`,
                 borderWidth: 1,
@@ -115,8 +116,12 @@ export class ProfileDescriptionComponent implements OnInit {
           this.games = value;
           const findedMedals = [];
           for (let medalUser of this.user?.medals) {
-            const medal = this.games?.find((game: any) => game.id == medalUser.game).medals?.find((medal: any) => medal.name == medalUser.medal);
-            findedMedals.push(medal);
+            const game = this.games?.find((game: any) => game.id == medalUser.game);
+            const medal = game.medals?.find((medal: any) => medal.name == medalUser.medal);
+            findedMedals.push({
+              medal: medal,
+              nameGame: game.name
+            });
           }
           this.medals = findedMedals;
           this.initializeCharts();

@@ -4,11 +4,6 @@ $cream: rgb(252, 251, 239);
 //   height: 400px !important;
 // }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .chart-card {
   padding: 20px;
@@ -19,4 +14,13 @@ $cream: rgb(252, 251, 239);
 
 .chart-card:hover {
   box-shadow: 4px 4px 8px rgb(0,0,0,0.2);
+}
+
+.logo-container {
+  width: 70px;
+  height: 70px;
+}
+
+.logo-container > img {
+  width: 70px;
 }

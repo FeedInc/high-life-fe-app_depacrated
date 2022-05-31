@@ -68,8 +68,8 @@ mat-card-content.description > mat-card-subtitle {
 
 .ranks-container {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
 }
 
 .ranks-container > img {
@@ -91,7 +91,17 @@ mat-card-content.description > mat-card-subtitle {
 }
 
 
+.flex {
+  display: flex;
+}
 
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
 
 
 

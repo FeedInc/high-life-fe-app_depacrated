@@ -163,6 +163,7 @@
       "id": "dota2",
       "name": "Dota 2",
       "type": "moba",
+      "logo": "https://1000marcas.net/wp-content/uploads/2020/02/Dota-2-Logo.png",
       "statsLabels":["Fighting", "Farming", "Suporting", "Pushing", "Versatility"],
       "medals": [
         {
@@ -310,6 +311,7 @@
     {
       "id": "lol",
       "name": "League Of Legends",
+      "logo": "https://static.wikia.nocookie.net/leagueoflegends/images/7/77/League_of_Legends_logo.png",
       "type": "moba",
       "statsLabels": ["Fighting", "Farming", "Vision", "Agression", "Survivability", "Objectives", "Consistency", "Versatility"],
       "medals": [
@@ -322,12 +324,14 @@
     {
       "id": "valorant",
       "name": "Valorant",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/2560px-Valorant_logo_-_pink_color_version.svg.png",
       "type": "shooter",
       "statsLabels": ["Kills", "Death", "Assistance"]
     },
     {
       "id": "csgo",
       "name": "CS-GO Counter-Strike Global Offensive",
+      "logo": "https://1000marcas.net/wp-content/uploads/2020/03/Logo-CSGO.png",
       "type": "shooter",
       "statsLabels": ["Kills", "Death", "Assistance"]
     }
