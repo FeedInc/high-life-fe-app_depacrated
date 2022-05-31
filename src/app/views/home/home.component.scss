@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 $yellow-duck: #FFA737;
+mat-card-subtitle, mat-card{
+  font-family: 'Poppins', sans-serif;
+  color: white;
 
+}
 .cover {
-  filter: blur(4px);
+
+  width: 100%;
+  //filter: blur(1px);
 }
 
 .image-2{

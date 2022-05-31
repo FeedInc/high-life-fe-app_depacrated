@@ -17,7 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MatCardModule } from "@angular/material/card";
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
-import { LoginComponent } from './views/login/login.component'
+// import { LoginComponent } from './views/login/login.component'
 
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -40,7 +40,6 @@ import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-cha
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
-    LoginComponent,
     AppChartDynamicComponent,
   ],
   imports: [
