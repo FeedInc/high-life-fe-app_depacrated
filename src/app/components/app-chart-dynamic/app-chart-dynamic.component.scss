@@ -1,0 +1,22 @@
+$cream: rgb(252, 251, 239);
+// canvas {
+//   width: 400px !important;
+//   height: 400px !important;
+// }
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-card {
+  padding: 20px;
+  background-color: $cream;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.chart-card:hover {
+  box-shadow: 4px 4px 8px rgb(0,0,0,0.2);
+}

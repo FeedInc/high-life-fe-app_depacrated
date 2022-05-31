@@ -28,6 +28,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatGridListModule } from "@angular/material/grid-list";
 
 import { HttpClientModule } from '@angular/common/http';
+import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-chart-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     SideBarComponent,
     ProfileDescriptionComponent,
     LoginComponent,
+    AppChartDynamicComponent,
   ],
   imports: [
     BrowserModule,

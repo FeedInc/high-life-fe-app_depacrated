@@ -16,6 +16,16 @@
         "first": "کیانا",
         "last": "نكو نظر"
       },
+      "medals":[
+        {
+          "game": "dota2",
+          "medal": "guardian-4"
+        },
+        {
+          "game": "lol",
+          "medal": "bronce-3"
+        }
+      ],
       "games": ["lol", "dota2"],
       "biography": "posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi non sapien",
       "location": {
@@ -61,7 +71,16 @@
         "medium": "https://randomuser.me/api/portraits/med/women/59.jpg",
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/59.jpg"
       },
-      "nat": "IR"
+      "nat": "IR",
+      "stats": [
+        { "gameId": "dota2",
+          "data":[20, 30, 40, 10, 20]
+        },
+        {
+          "gameId": "lol",
+          "data":[70, 35, 42, 19, 42, 90, 28, 90]
+        }
+      ]
     },
     {
       "id": "925-82-3872",
@@ -72,6 +91,16 @@
         "first": "Judd",
         "last": "Spencer"
       },
+      "medals":[
+        {
+          "game": "csgo",
+          "medal": "guardian-4"
+        },
+        {
+          "game": "valorant",
+          "medal": "bronce-3"
+        }
+      ],
       "games": ["valorant", "csgo"],
       "biography": "sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce aliquet magna a neque. Nullam ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque nonummy ipsum",
       "location": {
@@ -117,13 +146,23 @@
         "medium": "https://randomuser.me/api/portraits/med/men/96.jpg",
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/96.jpg"
       },
-      "nat": "US"
+      "nat": "US",
+      "stats": [
+        { "gameId": "csgo",
+          "data":[20, 30, 40, 10, 20]
+        },
+        {
+          "gameId": "valorant",
+          "data":[70, 35, 42, 19, 42, 90, 28, 90]
+        }
+      ]
     }
   ],
   "games": [
     {
       "id": "dota2",
       "name": "Dota 2",
+      "type": "moba",
       "statsLabels":["Fighting", "Farming", "Suporting", "Pushing", "Versatility"],
       "medals": [
         {
@@ -270,15 +309,27 @@
     },
     {
       "id": "lol",
-      "name": "League Of Legends"
+      "name": "League Of Legends",
+      "type": "moba",
+      "statsLabels": ["Fighting", "Farming", "Vision", "Agression", "Survivability", "Objectives", "Consistency", "Versatility"],
+      "medals": [
+        {
+          "name": "bronce-3",
+          "imageRank": "https://static.wikia.nocookie.net/leagueoflegends/images/8/81/Season_2019_-_Bronze_3.png"
+        }
+      ]
     },
     {
       "id": "valorant",
-      "name": "Valorant"
+      "name": "Valorant",
+      "type": "shooter",
+      "statsLabels": ["Kills", "Death", "Assistance"]
     },
     {
       "id": "csgo",
-      "name": "CS-GO Counter-Strike Global Offensive"
+      "name": "CS-GO Counter-Strike Global Offensive",
+      "type": "shooter",
+      "statsLabels": ["Kills", "Death", "Assistance"]
     }
   ]
 }
