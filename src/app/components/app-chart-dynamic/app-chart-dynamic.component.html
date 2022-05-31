@@ -1,5 +1,7 @@
 <div class="flex chart-card">
-  <p> {{ datasChart?.title }} </p>
+  <div class="logo-container">
+    <img class = "logo" [src]="dataChart.logo" alt="">
+  </div>
   <canvas id={{newIdChart}}></canvas>
 </div>
 

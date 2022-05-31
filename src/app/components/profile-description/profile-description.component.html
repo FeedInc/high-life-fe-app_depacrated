@@ -29,7 +29,10 @@
     </ul>
     <mat-card-subtitle> Medals </mat-card-subtitle>
     <div class="ranks-container">
-      <img [src]="medal?.imageRank" *ngFor="let medal of medals" alt="" />
+      <div class="flex align-items-center" *ngFor="let medal of medals" alt="">
+        <span> {{ medal?.nameGame }} </span>
+        <img [src]="medal?.medal?.imageRank" width="70"/>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>
@@ -37,7 +40,7 @@
 <mat-card id = "stats-section">
   <h1> Stats </h1>
   <div class = "stats">
-    <app-chart-dynamic [datasChart]="dataChart" [idNumber]="i" *ngFor="let dataChart of datasChart; let i = index;">
+    <app-chart-dynamic [dataChart]="dataChart" [idNumber]="i" *ngFor="let dataChart of datasChart; let i = index;">
     </app-chart-dynamic>
   </div>
 

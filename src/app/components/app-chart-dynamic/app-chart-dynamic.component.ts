@@ -7,7 +7,7 @@ import { Chart, registerables } from 'chart.js';
   styleUrls: ['./app-chart-dynamic.component.scss']
 })
 export class AppChartDynamicComponent implements OnInit, AfterViewInit {
-  @Input() datasChart: any;
+  @Input() dataChart: any;
   @Input() idNumber?: number;
   @Input() type?: string;
   public idChart: string = "";
@@ -19,14 +19,19 @@ export class AppChartDynamicComponent implements OnInit, AfterViewInit {
     Chart.register(...registerables);
   }
   ngOnInit() {
+
     console.log(document);
     this.newIdChart = `myChart${this.idNumber}`
     console.log("id on init", this.newIdChart);
   }
   ngAfterViewInit(): void {
-    if(this.chart)
-      this.chart.destroy();
-    this.chart = new Chart(this.newIdChart, this.datasChart.dataChart);
+    if(this.dataChart?.dataConfig?.type == "bar") {
+      let element = document!.getElementById(this.newIdChart);
+      element!.style.height = "400px";
+      element!.style.width = "400px";
+    }
+
+    this.chart = new Chart(this.newIdChart, this.dataChart.dataConfig);
   }
 
   generateChart() {
