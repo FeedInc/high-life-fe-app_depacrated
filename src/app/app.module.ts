@@ -17,7 +17,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MatCardModule } from "@angular/material/card";
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
+<<<<<<< HEAD
 // import { LoginComponent } from './views/login/login.component'
+=======
+import { ViewTournamentComponent } from './views/view-tournament/view-tournament.component';
+>>>>>>> ed03a1b9625ea6cdc625a7f9d1a60b7a5c3bb972
 
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -28,7 +32,13 @@ import { MatTableModule } from "@angular/material/table";
 import { MatGridListModule } from "@angular/material/grid-list";
 
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-chart-dynamic.component';
+=======
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
+>>>>>>> ed03a1b9625ea6cdc625a7f9d1a60b7a5c3bb972
 
 @NgModule({
   declarations: [
@@ -40,7 +50,13 @@ import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-cha
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
+<<<<<<< HEAD
     AppChartDynamicComponent,
+=======
+    SignInComponent,
+    SignUpComponent,
+    ViewTournamentComponent
+>>>>>>> ed03a1b9625ea6cdc625a7f9d1a60b7a5c3bb972
   ],
   imports: [
     BrowserModule,
@@ -56,7 +72,8 @@ import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-cha
     MatButtonModule,
     MatTableModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
