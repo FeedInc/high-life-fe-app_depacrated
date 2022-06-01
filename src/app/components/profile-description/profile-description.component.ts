@@ -60,6 +60,7 @@ export class ProfileDescriptionComponent implements OnInit {
       chartType = "bar";
 
       var tempDataChart = {
+        logo: temp.logo,
         title: temp.name,
         dataChart: {
           type: chartType,
@@ -113,10 +114,15 @@ export class ProfileDescriptionComponent implements OnInit {
       .subscribe({
         next: value => {
           this.games = value;
-          const findedMedals = [];
+          var findedMedals = [];
           for (let medalUser of this.user?.medals) {
-            const medal = this.games?.find((game: any) => game.id == medalUser.game).medals?.find((medal: any) => medal.name == medalUser.medal);
-            findedMedals.push(medal);
+            var foundGame = this.games?.find((game: any) => game.id == medalUser.game);
+            const nameGame = foundGame.name;
+            const medalFound = foundGame.medals?.find((medal: any) => medal.name == medalUser.medal);
+            findedMedals.push({
+              medalData: medalFound,
+              nameGame: nameGame
+            });
           }
           this.medals = findedMedals;
           this.initializeCharts();
