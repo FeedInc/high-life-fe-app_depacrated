@@ -1,5 +1,5 @@
 $dark-marine: #0D1B29;
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
 // * {
 //   font-family: 'Share Tech Mono', monospace;
 //   color: white;
@@ -12,8 +12,8 @@ $dark-marine: #0D1B29;
 
 
 h1 {
-  font-family: 'Share Tech Mono', monospace;
-  color: rgb(0, 206, 195);
+  font-family: 'Bebas Neue', cursive;
+  color: #00FF94;
 }
 
 h1.main-title {
@@ -22,8 +22,7 @@ h1.main-title {
 }
 
 p, li, span {
-  font-family: 'Share Tech', monospace;
-}
+  font-family: 'Poppins', sans-serif;}
 
 mat-card {
   width: 1000px;
