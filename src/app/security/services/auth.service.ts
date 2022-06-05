@@ -7,7 +7,7 @@ import {User} from "../model/user";
   providedIn: 'root'
 })
 export class AuthService {
-  basePath: string = 'http://localhost:3002/api/v1/auth';
+  basePath: string = 'http://localhost:3000/api/v1/auth';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',

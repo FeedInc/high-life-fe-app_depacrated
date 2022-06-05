@@ -3,7 +3,7 @@
   <button  mat-button [routerLink]="'/'"><app-logo-highlife></app-logo-highlife></button>
   <span class="default-spacer"></span>
   <button mat-button [routerLink]="'/sign-in'">SIGN IN <mat-icon><img src="https://cdn-icons-png.flaticon.com/512/1828/1828391.png" alt="login" width="25" height="25"></mat-icon></button>
-  <button mat-button [routerLink]="'/'">SIGN UP</button>
+  <button mat-button [routerLink]="'/sign-up'">SIGN UP</button>
   <button mat-button [routerLink]="'/'">Profile <mat-icon >account_circle</mat-icon></button>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
@@ -53,7 +53,7 @@
 
 
     <mat-nav-list>
-      <span class="side-title"><mat-icon class="icon"><img src="https://cdn-icons.flaticon.com/png/512/6110/premium/6110206.png?token=exp=1653859536~hmac=ea40dbccbaf02831432823a4ba9f744c" alt="league" width="25" height="25"></mat-icon>Leagues</span>
+      <span class="side-title"><mat-icon class="icon"><img src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/344/external-league-pro-gamer-inipagistudio-mixed-inipagistudio.png" alt="league" width="25" height="25"></mat-icon>Leagues</span>
       <mat-divider></mat-divider>
       <mat-list-item class="list-item" (click)="sidenav.close()">
         <a mat-button [routerLink]="'/'" class="source-name"><mat-icon class="icon"><img src="https://epulze.com/static/build/icon-dota2.png" alt="dota2" width="32" height="32"></mat-icon>Dota 2</a>

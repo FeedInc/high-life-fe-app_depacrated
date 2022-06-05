@@ -27,8 +27,9 @@ import { MatTableModule } from "@angular/material/table";
 import { MatGridListModule } from "@angular/material/grid-list";
 
 import { HttpClientModule } from '@angular/common/http';
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-chart-dynamic.component';
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-cha
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
-    AppChartDynamicComponent,
+    SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

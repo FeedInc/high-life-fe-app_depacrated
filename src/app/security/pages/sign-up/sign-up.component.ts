@@ -2,39 +2,40 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {Router} from "@angular/router";
-import {get} from "lodash";
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
 })
-export class SignInComponent {
-  signInForm: FormGroup;
+export class SignUpComponent {
+  signUpForm: FormGroup;
   constructor(public builder: FormBuilder,
               public authService: AuthService,
               public router: Router) {
-    this.signInForm = this.builder.group({
+    this.signUpForm = this.builder.group({
+      nickname: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
+  get nickname() { return this.signUpForm.controls['nickname'];}
 
-  get email() { return this.signInForm.controls['email'];}
+  get email() { return this.signUpForm.controls['email'];}
 
-  get password() { return this.signInForm.controls['password'];}
+  get password() { return this.signUpForm.controls['password'];}
 
-  signIn() {
-    this.authService.signIn(this.signInForm.value).subscribe((response: any) => {
+  signUp() {
+    this.authService.signUp(this.signUpForm.value).subscribe((response: any) => {
       this.authService.setToken(JSON.stringify(response.accessToken));
       this.authService.setCurrentUser(JSON.stringify(response.user));
-      this.signInForm.reset();
+      this.signUpForm.reset();
       console.log(`accessToken: ${this.authService.getToken()}`);
       this.router.navigate(['home']).then();
     })
   }
 
-  cancelSignIn() {
+  cancelSignUp() {
     console.log('Cancelled');
     this.router.navigate(['home']).then();
   }
