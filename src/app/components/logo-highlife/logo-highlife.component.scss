@@ -1,21 +1,24 @@
 $yellow-duck: #FFA737;
 
+.logo{
+  display: flex;
+  justify-content: center;
+}
 .logo span {
-    font-family: "high-life";
-    font-size: 50px;
+  font-family: "high-life", sans-serif;
+    font-size: 40px;
 }
 
 .logo span:nth-child(2),
-.logo span:nth-child(3) {
-    color: white;
+.logo span:nth-child(1) {
+    color: $yellow-duck;
 
 }
-
-.logo span:nth-child(1),
+.logo span:nth-child(4),
 .logo span:nth-child(5) {
-    color: $yellow-duck;
+  color: rgba(0,0,0,.87);
 }
 
 .logo img {
-    width: 10px;
+    width: 8px;
 }
