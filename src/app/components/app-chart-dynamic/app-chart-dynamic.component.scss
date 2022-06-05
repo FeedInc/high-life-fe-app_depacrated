@@ -4,11 +4,6 @@ $cream: rgb(252, 251, 239);
 //   height: 400px !important;
 // }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .chart-card {
   cursor: pointer;
@@ -22,4 +17,13 @@ $cream: rgb(252, 251, 239);
 .chart-card:hover {
   position: relative;
   bottom: 10px;
+}
+
+.logo-container {
+  width: 70px;
+  height: 70px;
+}
+
+.logo-container > img {
+  width: 70px;
 }

@@ -17,6 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MatCardModule } from "@angular/material/card";
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
+import { ViewTournamentComponent } from './views/view-tournament/view-tournament.component';
 
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
+import { AppChartDynamicComponent } from './components/app-chart-dynamic/app-chart-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -41,8 +43,10 @@ import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
     HomeComponent,
     SideBarComponent,
     ProfileDescriptionComponent,
+    AppChartDynamicComponent,
     SignInComponent,
     SignUpComponent,
+    ViewTournamentComponent
   ],
   imports: [
     BrowserModule,

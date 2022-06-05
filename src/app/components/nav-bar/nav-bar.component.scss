@@ -58,6 +58,10 @@ mat-sidenav-container {
   background-color: transparent;
   margin: 20px;
 }
+mat-sidenav-content.mat-drawer-content.mat-sidenav-content {
+  display:flex;
+  justify-content: center;
+}
 .sidenav-container {
   background-color:$dark-blue;
   width: 100%;

@@ -9,7 +9,9 @@ import { User } from '../models/user';
 export class UsersApiService {
 
   port = 3000;
-  baseUrl = `http://localhost:${this.port}/users`;
+  // baseUrl = `http://localhost:${this.port}/users`;
+  baseUrl = `https://my-json-server.typicode.com/FeedInc/high-life-fe-app/users`;
+
   //pass automatically to attribute. Generate 2 instances the value you pass and the value yo get.
   constructor(private http: HttpClient) {}
   httpOptions = {
