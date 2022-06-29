@@ -174,60 +174,6 @@
           ]
         }
       ]
-    },
-    {
-      "firstName": "Dendi",
-      "lastName": "",
-      "nickName": "Dendi",
-      "email": "u201718169@upc.edu.pe",
-      "password": "1234567",
-      "urlToImage": "https://th.bing.com/th/id/OIP.fCT22TyA-A6uUktiqylIzwHaEL?w=330&h=186&c=7&r=0&o=5&pid=1.7",
-      "id": "AAWqLTe",
-      "name": {
-        "title": "Mr",
-        "first": "Daniel",
-        "last": "Ishnutan"
-      },
-      "medals": [
-        {
-          "game": "dota2",
-          "medal": "divine-4"
-        },
-        {
-          "game": "lol",
-          "medal": "bronce-3"
-        }
-      ],
-      "games": [
-        "lol",
-        "dota2"
-      ],
-      "biography": "I love playing DOTA2 and teaching my fans",
-      "location": {
-        "street": {
-          "number": 7993,
-          "name": "Luis Prado"
-        },
-        "city": "Ukraine",
-        "state": "",
-        "country": ""
-      },
-      "picture": {
-        "large": "https://th.bing.com/th/id/OIP.fCT22TyA-A6uUktiqylIzwHaEL?w=330&h=186&c=7&r=0&o=5&pid=1.7"
-      },
-      "stats": [
-        {
-          "gameId": "dota2",
-          "data": [
-            100,
-            100,
-            80,
-            40,
-            70
-          ]
-        }
-     
-      ]
     }
   ],
   "games": [
