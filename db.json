@@ -193,7 +193,7 @@
         "Versatility"
       ],
       "medals": [
-     
+
         {
           "name": "crusader-4",
           "imageRank": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/87/SeasonalRank3-4.png"
@@ -201,7 +201,7 @@
         {
           "name": "crusader-5",
           "imageRank": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b1/SeasonalRank3-5.png"
-        }
+        },
         {
           "name": "legend-1",
           "imageRank": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/79/SeasonalRank5-1.png"
@@ -263,7 +263,7 @@
       "address": "America",
       "urlToImage": "https://esportsbureau.com/wp-content/uploads/2022/01/epic-esports-events-y-winline-gestionaran-la-dota-2-champions-league-season-7.jpeg",
       "id": 2
-    }
+    },
     {
       "name": "Torneo 6",
       "game": "dota2",
