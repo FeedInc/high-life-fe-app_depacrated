@@ -346,37 +346,7 @@
       "address": "America",
       "urlToImage": "https://esportsbureau.com/wp-content/uploads/2022/01/epic-esports-events-y-winline-gestionaran-la-dota-2-champions-league-season-7.jpeg",
       "id": 2
-    },
-    {
-      "name": "Torneo 3",
-      "game": "lol",
-      "gameType": "5 vs 5",
-      "date": "23/06/22",
-      "maxTeams": 16,
-      "address": "Europe",
-      "urlToImage": "https://esportsbureau.com/wp-content/uploads/2022/01/epic-esports-events-y-winline-gestionaran-la-dota-2-champions-league-season-7.jpeg",
-      "id": 3
-    },
-    {
-      "name": "Torneo 4",
-      "game": "valorant",
-      "gameType": "5 vs 5",
-      "date": "23/06/22",
-      "maxTeams": 16,
-      "address": "Europe",
-      "urlToImage": "https://esportsbureau.com/wp-content/uploads/2022/01/epic-esports-events-y-winline-gestionaran-la-dota-2-champions-league-season-7.jpeg",
-      "id": 4
-    },
-    {
-      "name": "Torneo 5",
-      "game": "dota2",
-      "gameType": "5 vs 5",
-      "date": "23/06/22",
-      "maxTeams": 16,
-      "address": "Europe",
-      "urlToImage": "https://esportsbureau.com/wp-content/uploads/2022/01/epic-esports-events-y-winline-gestionaran-la-dota-2-champions-league-season-7.jpeg",
-      "id": 5
-    },
+    }
     {
       "name": "Torneo 6",
       "game": "dota2",
